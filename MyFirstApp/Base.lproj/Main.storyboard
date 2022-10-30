@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,66 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="jpeg-home" translatesAutoresizingMaskIntoConstraints="NO" id="iRL-nR-iwd">
+                                <rect key="frame" x="27" y="225" width="319" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="p5s-c2-7rj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alL-EK-mfV">
+                                <rect key="frame" x="119" y="420" width="134" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Uj2-Cq-jfr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="FATİH BURAK"/>
+                                <connections>
+                                    <action selector="changeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsG-Fe-Aus"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BURAK BABA IOS FETHİ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43x-eE-BFY">
+                                <rect key="frame" x="84" y="74" width="206" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="589-gm-IjE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iRL-nR-iwd" firstAttribute="centerX" secondItem="alL-EK-mfV" secondAttribute="centerX" id="AJc-tn-MwZ"/>
+                            <constraint firstItem="43x-eE-BFY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="Dyc-ih-aOf"/>
+                            <constraint firstItem="iRL-nR-iwd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="Eca-Ly-4WT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="alL-EK-mfV" secondAttribute="bottom" constant="303" id="bGN-Rv-Rpt"/>
+                            <constraint firstItem="43x-eE-BFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="d3i-Va-7QP"/>
+                            <constraint firstItem="alL-EK-mfV" firstAttribute="top" secondItem="iRL-nR-iwd" secondAttribute="bottom" constant="54" id="geJ-wP-mYd"/>
+                            <constraint firstItem="43x-eE-BFY" firstAttribute="centerX" secondItem="iRL-nR-iwd" secondAttribute="centerX" id="je5-Zv-h6b"/>
+                            <constraint firstItem="43x-eE-BFY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q6R-r4-rpk"/>
+                            <constraint firstItem="alL-EK-mfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="tDV-gE-QAg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="burakBabaLabel" destination="43x-eE-BFY" id="cZ5-mX-eu9"/>
+                        <outlet property="imageView" destination="iRL-nR-iwd" id="FUC-k4-0GX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="2.9556650246305418"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jpeg-home" width="800" height="400"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
